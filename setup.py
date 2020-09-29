@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="QDgym",
-    url="https://github.com/ollenilsson19/QDgym.git",
+    url="https://github.com/ollenilsson19/QDgym",
     author="Olle Nilsson",
     author_email="olle.nilsson19@imperial.ac.uk",
     packages=["QDgym"],
