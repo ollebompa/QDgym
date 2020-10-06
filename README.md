@@ -1,6 +1,6 @@
 # Intro
 
-QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimization algorithms and provide a common interface that allows comparisons between QD and standard Deep Reinforcement Learning algorithms.
+QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimization algorithms and provide a common interface that allows easy comparisons between different QD algorithms and between QD algorithms and Deep Reinforcement Learning algorithms.
 
 For those new to QD Optimization, here are three exellent introductory papers in no particular order:
 
