@@ -1,6 +1,6 @@
 # Intro
 
-QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimisation algorithms and provide a common interface that allows comparisons between QD and standard Deep Reinforcement Learning algorithms.
+QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimization algorithms and provide a common interface that allows comparisons between QD and standard Deep Reinforcement Learning algorithms.
 
 For those new to QD Optimization, here are three exellent introductory papers in no particular order:
 
@@ -11,18 +11,20 @@ For those new to QD Optimization, here are three exellent introductory papers in
 Also checkout: [https://quality-diversity.github.io/]()
 
 ## Future Plans
-The current version is a v0.1 with a limited number of tasks implemeted. The plan is that as work on and evaluation of the [MAP-Elites GAPG](https://github.com/ollenilsson19/MAP-Elites-GAPG) algorithm progresses, new tasks implemeted for this evaluation will be added to QDgym.   
+The current version is a v0.1 with a limited number of tasks implemeted. The plan is that as work on and evaluation of the [MAP-Elites GAPG](https://github.com/ollenilsson19/MAP-Elites-GAPG) algorithm progresses, new tasks implemeted for this evaluation will be added to QDgym. Beyond this, the plan is to add any new tasks developed as part of my research in QD Optimization. If the interest in a unified framework for QD benchmarks from the research community is significant, I will make an effort to keep QDgym as complete as possible with respect to tasks used across QD research. 
+
+Contibutions welcome!
 
 # Tasks
 
-Currently five tasks are implemented that build on [PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet) robotic locomotion benchmarks where the task is to discover diverse ways to walk (Diversity aspect) where for each type of walk find the fastest walk (Quality aspect).
+Currently five tasks are implemented that build on [PyBullet](https://github.com/bulletphysics/bullet3/tree/master/examples/pybullet) robotic locomotion benchmarks where the task is to discover diverse ways to walk (Diversity aspect), where for each type of walk find the fastest walk (Quality aspect).
 
-+ Behaviour Descriptor (BD): Proporiion of contact time each foot has with the ground over a walk. The BD in the QDAnt task is thus 4-D while QDHalfCheetah, QDHumanoid and QDWalker have 2-D BDs. The BD for QDHopper is 1-D.
-+ Fitness: Walking Distance over 1000 simulation steps/walking speed
++ Behaviour Descriptor (BD): Proportion of contact time each foot has with the ground over a walk. The BD in the QDAnt task is thus 4-D while QDHalfCheetah, QDHumanoid and QDWalker have 2-D BDs. The BD for QDHopper is 1-D.
++ Fitness: Walking distance over 1000 simulation steps/walking speed.
 
 
 <p align="center">
-<img style="float: center;" src="fig/QD_envs2.png" width="665">
+<img style="float: center;" src="fig/QD_envs2.png" width="865">
 </p>
 
 
@@ -61,7 +63,7 @@ pip3 install git+https://github.com/ollenilsson19/QDgym.git#egg=QDgym
 
 this will also automatically install the dependencies requred (gym, pybullet, numpy).
 
-To run tasks with QD gym follow the below structure: 
+To run tasks with QDgym follow the below structure: 
 
 ``` python
 # imports
