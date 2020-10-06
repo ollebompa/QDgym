@@ -13,7 +13,7 @@ Also checkout: [https://quality-diversity.github.io/]()
 ## Future Plans
 The current version is a v0.1 with a limited number of tasks implemeted. The plan is that as work on and evaluation of the [MAP-Elites GAPG](https://github.com/ollenilsson19/MAP-Elites-GAPG) algorithm progresses, new tasks implemeted for this evaluation will be added to QDgym. Beyond this, the plan is to add any new tasks developed as part of my research in QD Optimization. If the interest in a unified framework for QD benchmarks from the research community is significant, I will make an effort to keep QDgym as complete as possible with respect to tasks used across QD research. 
 
-Contibutions welcome!
+Contributions welcome!
 
 # Tasks
 
