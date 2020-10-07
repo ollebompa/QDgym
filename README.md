@@ -71,7 +71,7 @@ import gym
 import QDgym
 
 # make environment
-env = gym.make(env_name)
+env = gym.make("env_name")
 # reset environment
 state = env.reset()
 done = False
