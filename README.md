@@ -1,6 +1,6 @@
 # Intro
 
-QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimization algorithms and provide a common interface that allows easy comparisons between different QD algorithms and between QD algorithms and Deep Reinforcement Learning algorithms.
+QDgym is a framework for Quality Diversity (QD) Optimization benchmarks. It is built on [OpenAI Gym](https://github.com/openai/gym) and uses the same interface. QDgym is meant to unify benchmarks for QD Optimization algorithms and provide a common interface that allows easy comparisons between different QD algorithms. QDgym was born out of the desire to not perpetuate the creation of new benchmarks that are difficult/impossible to use for other researchers when developing benchmark tasks for the [PGA-MAP-Elites](https://github.com/ollenilsson19/PGA-MAP-Elites) algorithm. These benchmarks were therefore implemented as this stand-alone open-source module with no proprietary software dependencies.
 
 For those new to QD Optimization, here are three exellent introductory papers in no particular order:
 
@@ -11,9 +11,7 @@ For those new to QD Optimization, here are three exellent introductory papers in
 Also checkout: [https://quality-diversity.github.io/]()
 
 ## Future Plans
-The current version is a v0.1 with a limited number of tasks implemeted. The plan is that as work on and evaluation of the [MAP-Elites GAPG](https://github.com/ollenilsson19/MAP-Elites-GAPG) algorithm progresses, new tasks implemeted for this evaluation will be added to QDgym. Beyond this, the plan is to add any new tasks developed as part of my research in QD Optimization. If the interest in a unified framework for QD benchmarks from the research community is significant, I will make an effort to keep QDgym as complete as possible with respect to tasks used across QD research. 
-
-Contributions welcome!
+The current version is a v0.1 with a only the evaluation tasks of [PGA-MAP-Elites](https://github.com/ollenilsson19/PGA-MAP-Elites) implemented (plus humaniod). My plan is to add any new tasks I develop as part of my research in under this format. 
 
 # Tasks
 
@@ -77,7 +75,7 @@ state = env.reset()
 done = False
 # eval loop
 while not done: 
-    action = actor.select_action(state)
+    action = controller.select_action(state)
     state, reward, done, _ = env.step(action) 
 # get fitness and BD
 fitness = env.tot_reward
@@ -86,7 +84,7 @@ behaviour_descriptor = env.desc
 env.close()
 ```
 
-The above example assumes there is a defined contoller `actor` with a method `select_action` that for a given input (state) outputs the desired action. Replace `env_name` with your desired task (QDWalker2DBulletEnv-v0, QDHalfCheetahBulletEnv-v0, QDAntBulletEnv-v0, QDHopperBulletEnv-v0, QDHumanoidBulletEnv-v0).
+The above example assumes there is a defined `controller` with a method `select_action` that for a given input (state) outputs the desired action. Replace `env_name` with your desired task (QDWalker2DBulletEnv-v0, QDHalfCheetahBulletEnv-v0, QDAntBulletEnv-v0, QDHopperBulletEnv-v0, QDHumanoidBulletEnv-v0).
 
-For more detailed example use see `main.py` and `vectorized_env.py` in the [MAP-Elites GAPG implemetation](https://github.com/ollenilsson19/MAP-Elites-GAPG).
+For more detailed example use see `main.py` and `vectorized_env.py` in the [PGA-MAP-Elites implemetation](https://github.com/ollenilsson19/PGA-MAP-Elites).
 
