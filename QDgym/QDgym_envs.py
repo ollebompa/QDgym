@@ -35,6 +35,8 @@ class QDAntBulletEnv(AntBulletEnv):
         self.T += 1
         self.alive = (self.__dict__["_alive"] >= 0.0)
         self.desc = self.desc_acc / self.T
+        info["bc"] = self.desc
+        info["x_pos"] = None
         return state, reward, done, info
 
 
@@ -69,6 +71,8 @@ class QDHalfCheetahBulletEnv(HalfCheetahBulletEnv):
         self.T += 1
         self.alive = (self.__dict__["_alive"] >= 0.0)
         self.desc = self.desc_acc / self.T
+        info["bc"] = self.desc
+        info["x_pos"] = None
         return state, reward, done, info
 
 
@@ -102,6 +106,8 @@ class QDWalker2DBulletEnv(Walker2DBulletEnv):
         self.T += 1
         self.alive = (self.__dict__["_alive"] >= 0.0)
         self.desc = self.desc_acc / self.T
+        info["bc"] = self.desc
+        info["x_pos"] = None
         return state, reward, done, info
 
 
@@ -135,6 +141,8 @@ class QDHumanoidBulletEnv(HumanoidBulletEnv):
         self.T += 1
         self.alive = (self.__dict__["_alive"] >= 0.0)
         self.desc = self.desc_acc / self.T
+        info["bc"] = self.desc
+        info["x_pos"] = None
         return state, reward, done, info
 
 
@@ -168,6 +176,8 @@ class QDHopperBulletEnv(HopperBulletEnv):
         self.T += 1
         self.alive = (self.__dict__["_alive"] >= 0.0)
         self.desc = self.desc_acc / self.T
+        info["bc"] = self.desc
+        info["x_pos"] = None
         return state, reward, done, info
 
 

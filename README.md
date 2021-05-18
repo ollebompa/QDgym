@@ -76,10 +76,10 @@ done = False
 # eval loop
 while not done: 
     action = controller.select_action(state)
-    state, reward, done, _ = env.step(action) 
+    state, reward, done, info = env.step(action) 
 # get fitness and BD
 fitness = env.tot_reward
-behaviour_descriptor = env.desc
+behaviour_descriptor = env.desc # alternatively behaviour_descriptor = info["bc"] for compatability with the code released for MAP-Elites-ES
 # close environment
 env.close()
 ```
