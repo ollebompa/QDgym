@@ -11,7 +11,7 @@ For those new to QD Optimization, here are three exellent introductory papers in
 Also checkout: [https://quality-diversity.github.io/]()
 
 ## Future Plans
-The current version is a v0.1 with a only the evaluation tasks of [PGA-MAP-Elites](https://github.com/ollenilsson19/PGA-MAP-Elites) implemented (plus humaniod). My plan is to add any new tasks I develop as part of my research in under this format. 
+The current version is a v0.1 with a only the evaluation tasks of [PGA-MAP-Elites](https://github.com/ollenilsson19/PGA-MAP-Elites) implemented (plus humaniod). My plan is to add any new tasks I develop as part of my research under this format. 
 
 # Tasks
 
@@ -48,9 +48,6 @@ and yaw angles and the relative position of the robots joints.
     + QDHumanoidBulletEnv-v0: 2-dimensions.
 
 
-
-
-
 # Installation and Use
 
 Installation is easy with pip. Just do:
@@ -60,6 +57,12 @@ pip3 install git+https://github.com/ollenilsson19/QDgym.git#egg=QDgym
 ```
 
 this will also automatically install the dependencies requred (gym, pybullet, numpy).
+
+If the installation fails, it will likely be due to your pip version being too old for the requirements of opencv (gym dependency). See: https://pypi.org/project/opencv-python/. The solution is likely to upgrade pip.
+
+```
+pip install --upgrade pip
+```
 
 To run tasks with QDgym follow the below structure: 
 
